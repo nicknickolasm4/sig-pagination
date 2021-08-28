@@ -1,203 +1,181 @@
 function items(options) {
-    if(options.items && options.page){
 
-    }
-    const productsd = options.items
-    const page = options.page
-    if (!page) {
-      page = 1;
-    }
-    const showproducts = 5;
-    var calcd = showproducts * (page - 1);
-    var calcd2 = showproducts * (page - 1) + showproducts;
-    const totalprodutos = productsd.length;
-    if (calcd2 >= totalprodutos) {
-      calcd2 = totalprodutos;
-    }
-    if (page == 1) {
-      calcd = 1;
-    }
+  var productsd = options.items
 
-    var start = 0;
-    var end = showproducts;
-
-    if (page == 1) {
-      start = 0;
-      end = showproducts;
-    } else {
-      start = showproducts * (page - 1);
-      end = showproducts * (page - 1) + showproducts;
-    }
-
-    var products = productsd.slice(start, end);
-
-    return products;
+  var page = options.page
+  if (!page) {
+    page = 1;
+  }
+  const showproducts = options.show;
+  var calcd = showproducts * (page - 1);
+  var calcd2 = showproducts * (page - 1) + showproducts;
+  const totalprodutos = productsd.length;
+  if (calcd2 >= totalprodutos) {
+    calcd2 = totalprodutos;
+  }
+  if (page == 1) {
+    calcd = 1;
   }
 
-  function pagination(options) {
-    const products = options.items
-    const page = options.page
-    if (!page) {
-      page = 1;
+  var start = 0;
+  var end = showproducts;
+
+  if (page == 1) {
+    start = 0;
+    end = showproducts;
+  } else {
+    start = showproducts * (page - 1);
+    end = showproducts * (page - 1) + showproducts;
+  }
+
+  var products = productsd.slice(start, end);
+
+  return products;
+}
+
+function pagination(options) {
+  var productsd = options.items
+
+  var page = options.page
+
+  if (!page) {
+    page = 1;
+  }
+  const totalprodutos = productsd.length;
+  const showproducts = options.show;
+  var calcd = showproducts * (page - 1);
+  var calcd2 = showproducts * (page - 1) + showproducts;
+
+  if (calcd2 >= totalprodutos) {
+    calcd2 = totalprodutos;
+  }
+  if (page == 1) {
+    calcd = 1;
+  }
+
+  const optionsd = [];
+  const final = [];
+
+  const pages2 = totalprodutos / showproducts;
+  const totalpaginacao = Math.ceil(pages2);
+
+  const penultima = totalpaginacao - 1;
+  const proxima = page + 1;
+  const voltar = page - 1;
+  const totalmaxpage = options.maxperpage;
+
+  var nextpage = 0;
+  if (totalpaginacao > 6) {
+    nextpage = totalpaginacao;
+    if (nextpage < totalpaginacao) {
+      nextpage = page + totalpaginacao;
     }
-    const totalprodutos = products.length;
-    const showproducts = 5;
-    var calcd = showproducts * (page - 1);
-    var calcd2 = showproducts * (page - 1) + showproducts;
-
-    if (calcd2 >= totalprodutos) {
-      calcd2 = totalprodutos;
+  } else {
+    nextpage = totalpaginacao;
+  }
+  for (var i = 1; i <= nextpage; i++) {
+    var ia = i + 9999;
+    if (i === 1) {
+      if (page !== 1) {
+        optionsd.push({'i': 0, active: true, page: page - 1});
+      }
     }
-    if (page == 1) {
-      calcd = 1;
-    }
-
-    const options = [];
-    const final = [];
-
-    const pages2 = totalprodutos / showproducts;
-    const totalpaginacao = Math.ceil(pages2);
-
-    const penultima = totalpaginacao - 1;
-    const proxima = page + 1;
-    const voltar = page - 1;
-    const totalmaxpage = 6;
-
-    var nextpage = 0;
-    if (totalpaginacao > 6) {
-      nextpage = totalpaginacao;
-      if (nextpage < totalpaginacao) {
-        nextpage = page + totalpaginacao;
-      }
-    } else {
-      nextpage = totalpaginacao;
-    }
-    for (var i = 1; i <= nextpage; i++) {
-      var ia = i + 9999;
-      if (i === 1) {
-        if (page !== 1) {
-          optionsd.push(
-            <li key={ia + 999}>
-              <a
-                href={category.slug.toLowerCase() + "?p=" + voltar}
-                className="des-font border"
-              >
-                <i className="ti-arrow-left"></i>
-              </a>
-            </li>
-          );
-        }
-      }
-      if (i > voltar) {
-        if (i < page + totalmaxpage) {
-          if (i === page) {
-            options.push(
-              <li key={ia}>
-                <a href={category.slug.toLowerCase()} className="des-font active">
-                  {i}
-                </a>
-              </li>
-            );
-          } else {
-            optionsd.push(
-              <li key={ia}>
-                <a
-                  href={category.slug.toLowerCase() + "?p=" + i}
-                  className="des-font"
-                >
-                  {i}
-                </a>
-              </li>
-            );
-          }
-        }
-      }
-
-      if (i === penultima) {
-        final.push(
-          <li key={ia + 33}>
-            <a
-              href={category.slug.toLowerCase() + "?p=" + proxima}
-              className="des-font border"
-            >
-              <i className="ti-arrow-right"></i>
-            </a>
-          </li>
-        );
-      }
-      if (i === totalpaginacao) {
-        if (page < totalpaginacao) {
-          optionsd.push(final[0]);
+    if (i > voltar) {
+      if (i < page + totalmaxpage) {
+        if (i === page) {
+          optionsd.push({i, active: true, page: i});
+        } else {
+          optionsd.push({i, active: false, page: i});
         }
       }
     }
 
-    return optionsd;
+    if (i === penultima) {
+      final.push({'i': 999999, active: true, page: page+1});
+    }
+    if (i === totalpaginacao) {
+      if (page < totalpaginacao) {
+        optionsd.push(final[0]);
+      }
+    }
   }
 
-  function from(options) {
-    const products = options.items
-    const page = options.page
-    if (!page) {
-      page = 1;
-    }
-    const totalprodutos = products.length;
-    const showproducts = 5;
-    var calcd = showproducts * (page - 1);
-    var calcd2 = showproducts * (page - 1) + showproducts;
+  return optionsd;
+}
 
-    if (calcd2 >= totalprodutos) {
-      calcd2 = totalprodutos;
-    }
-    if (page == 1) {
-      calcd = 1;
-    }
+function from(options) {
+  var productsd = options.items
 
-    return calcd;
+  var page = options.page
+
+  if (!page) {
+    page = 1;
+  }
+  const totalprodutos = productsd.length;
+  const showproducts = options.show;
+  var calcd = showproducts * (page - 1);
+  var calcd2 = showproducts * (page - 1) + showproducts;
+
+  if (calcd2 >= totalprodutos) {
+    calcd2 = totalprodutos;
+  }
+  if (page == 1) {
+    calcd = 1;
   }
 
-  function to(options) {
-    const products = options.items
-    const page = options.page
-    if (!page) {
-      page = 1;
-    }
-    const totalprodutos = products.length;
-    const showproducts = 5;
-    var calcd = showproducts * (page - 1);
-    var calcd2 = showproducts * (page - 1) + showproducts;
+  return calcd;
+}
 
-    if (calcd2 >= totalprodutos) {
-      calcd2 = totalprodutos;
-    }
-    if (page == 1) {
-      calcd = 1;
-    }
+function to(options) {
+  var productsd = options.items
 
-    return calcd2;
+  var page = options.page
+
+  if (!page) {
+    page = 1;
+  }
+  const totalprodutos = productsd.length;
+  const showproducts = options.show;
+  var calcd = showproducts * (page - 1);
+  var calcd2 = showproducts * (page - 1) + showproducts;
+
+  if (calcd2 >= totalprodutos) {
+    calcd2 = totalprodutos;
+  }
+  if (page == 1) {
+    calcd = 1;
   }
 
-  function total(options) {
-    const products = options.items
-    const page = options.page
-    if (!page) {
-      page = 1;
-    }
-    const totalprodutos = products.length;
-    const showproducts = 5;
-    var calcd = showproducts * (page - 1);
-    var calcd2 = showproducts * (page - 1) + showproducts;
+  return calcd2;
+}
 
-    if (calcd2 >= totalprodutos) {
-      calcd2 = totalprodutos;
-    }
-    if (page == 1) {
-      calcd = 1;
-    }
+function total(options) {
+  var productsd = options.items
 
-    return totalprodutos;
+  var page = options.page
+
+  if (!page) {
+    page = 1;
+  }
+  const totalprodutos = productsd.length;
+  const showproducts = options.show;
+  var calcd = showproducts * (page - 1);
+  var calcd2 = showproducts * (page - 1) + showproducts;
+
+  if (calcd2 >= totalprodutos) {
+    calcd2 = totalprodutos;
+  }
+  if (page == 1) {
+    calcd = 1;
   }
 
-  module.exports.items = items
+  return totalprodutos;
+}
+
+module.exports.items = items
+module.exports.pagination = pagination
+module.exports.from = from
+module.exports.to = to
+module.exports.total = total
 
 
