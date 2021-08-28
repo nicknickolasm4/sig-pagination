@@ -1,3 +1,11 @@
+
+![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+
+
 # what is this?
 
 Pagination for array items and set items in map
@@ -75,54 +83,4 @@ i = 999999 arrow right
 
 ## EXAMPLE USAGE IN NEXTJS/ REACT
 
-`<ul className="pagination">
-                  {pagination2.map((_pages, i) =>
-                    _pages.active ? (
-                      _pages.i == 0 ? (
-                        <li key={i}>
-                          <a
-                            href={
-                              category.slug.toLowerCase() + "?p=" + _pages.page
-                            }
-                            className="des-font border"
-                          >
-                            <i className="ti-arrow-left"></i>
-                          </a>
-                        </li>
-                      ) : _pages.i == 999999 ? (
-                        <li key={i}>
-                          <a
-                            href={
-                              category.slug.toLowerCase() + "?p=" + _pages.page
-                            }
-                            className="des-font border"
-                          >
-                            <i className="ti-arrow-right"></i>
-                          </a>
-                        </li>
-                      ) : (
-                        <li key={i}>
-                          <a
-                            href={
-                              category.slug.toLowerCase() + "?p=" + _pages.page
-                            }
-                            className="des-font active"
-                          >
-                            {_pages.i}
-                          </a>
-                        </li>
-                      )
-                    ) : (
-                      <li key={i}>
-                        <a
-                          href={
-                            category.slug.toLowerCase() + "?p=" + _pages.page
-                          }
-                          className="des-font"
-                        >
-                          {_pages.i}
-                        </a>
-                      </li>
-                    )
-                  )}
-                </ul>`
+[HERE](example.js)<br>
