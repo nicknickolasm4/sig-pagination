@@ -87,3 +87,4 @@ import { items, pagination, from, to, total } from "sig-pagination"
 ## EXAMPLE USAGE IN NEXTJS/ REACT
 
 [HERE](example.js)<br>
+ 
