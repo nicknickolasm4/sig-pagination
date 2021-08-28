@@ -41,6 +41,8 @@ i = 0 page arrow left
 i = 999999 arrow right
 ```
 ## examples
+  import { items, pagination, from, to, total } from "sig-pagination"
+
 
 ## for list items
     var products = items({
