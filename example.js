@@ -6,7 +6,7 @@
                         <li key={i}>
                           <a
                             href={
-                              category.slug.toLowerCase() + "?p=" + _pages.page
+                               "?p=" + _pages.page
                             }
                             className="des-font border"
                           >
@@ -17,7 +17,7 @@
                         <li key={i}>
                           <a
                             href={
-                              category.slug.toLowerCase() + "?p=" + _pages.page
+                               "?p=" + _pages.page
                             }
                             className="des-font border"
                           >
@@ -28,7 +28,7 @@
                         <li key={i}>
                           <a
                             href={
-                              category.slug.toLowerCase() + "?p=" + _pages.page
+                               "?p=" + _pages.page
                             }
                             className="des-font active"
                           >
@@ -40,7 +40,7 @@
                       <li key={i}>
                         <a
                           href={
-                            category.slug.toLowerCase() + "?p=" + _pages.page
+                             "?p=" + _pages.page
                           }
                           className="des-font"
                         >
