@@ -24,7 +24,7 @@ maxperpage = int, max pagination example 5: [1,2,3,4,5,next]
 show = int, max items per page.
 
 ## functions
-pagination return:
+```pagination return:
 0: {i: 0, active: true, page: 4}
 1: {i: 5, active: true, page: 5}
 2: {i: 6, active: false, page: 6}
@@ -39,7 +39,7 @@ page, is a page params
 i = pages
 i = 0 page arrow left
 i = 999999 arrow right
-
+```
 ## examples
 
 ## for list items
