@@ -8,7 +8,8 @@
 
 # what is this?
 
-Pagination for array items and set items in map
+Pagination for array items and set items in map of javascript
+<br/>
 
 
 # instalation

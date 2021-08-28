@@ -1,15 +1,20 @@
 {
   "name": "sig-pagination",
   "version": "1.0.3",
-  "description": "Pagination all array",
+  "description": "Pagination all array of javascript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "npm",
-    "npm-hello-word",
-    "pagination"
+    "npm-sig-pagination",
+    "pagination",
+    "react",
+    "javascript",
+    "nodejs",
+    "nextjs",
+    "vuejs"
   ],
   "author": "Nicknickolasm4",
   "license": "ISC",
