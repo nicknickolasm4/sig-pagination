@@ -1,5 +1,5 @@
 {
-  "name": "sigpagination",
+  "name": "sig-pagination",
   "version": "1.0.0",
   "description": "Pagination all array",
   "main": "index.js",
@@ -12,5 +12,13 @@
     "pagination"
   ],
   "author": "Nicknickolasm4",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicknickolasm4/sig-pagination.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nicknickolasm4/sig-pagination/issues"
+  },
+  "homepage": "https://github.com/nicknickolasm4/sig-pagination#readme"
 }

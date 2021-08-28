@@ -76,7 +76,7 @@ function items(options) {
       var ia = i + 9999;
       if (i === 1) {
         if (page !== 1) {
-          options.push(
+          optionsd.push(
             <li key={ia + 999}>
               <a
                 href={category.slug.toLowerCase() + "?p=" + voltar}
@@ -99,7 +99,7 @@ function items(options) {
               </li>
             );
           } else {
-            options.push(
+            optionsd.push(
               <li key={ia}>
                 <a
                   href={category.slug.toLowerCase() + "?p=" + i}
@@ -127,12 +127,12 @@ function items(options) {
       }
       if (i === totalpaginacao) {
         if (page < totalpaginacao) {
-          options.push(final[0]);
+          optionsd.push(final[0]);
         }
       }
     }
-    console.log(options);
-    return options;
+
+    return optionsd;
   }
 
   function from(options) {
