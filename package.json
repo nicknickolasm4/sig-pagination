@@ -1,0 +1,16 @@
+{
+  "name": "sigpagination",
+  "version": "1.0.0",
+  "description": "Pagination all array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "npm-hello-word",
+    "pagination"
+  ],
+  "author": "Nicknickolasm4",
+  "license": "ISC"
+}
