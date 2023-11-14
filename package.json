@@ -1,6 +1,6 @@
 {
   "name": "sig-pagination",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Pagination all array of javascript",
   "main": "index.js",
   "scripts": {
