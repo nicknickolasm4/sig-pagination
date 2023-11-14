@@ -3,7 +3,7 @@
 [![npm license](https://img.shields.io/npm/l/sig-pagination.svg)](https://npmjs.org/package/sig-pagination)
 [![npm downloads](https://img.shields.io/npm/dm/sig-pagination)](https://npmjs.org/package/sig-pagination)
 [![Coverage Status](https://badgen.net/coveralls/c/github/nicknickolasm4/sig-pagination/master)](https://coveralls.io/github/nicknickolasm4/sig-pagination?branch=master)
-[![HitCount](https://hits.dwyl.com/nicknickolasm4/sig-pagination.svg)](https://hits.dwyl.com/nicknickolasm4/sig-pagination)
+[![HitCount](https://hits.dwyl.com/nicknickolasm4/sig-pagination.svg)](https://github.com/nicknickolasm4/sig-pagination)
 
 
 
