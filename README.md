@@ -1,3 +1,4 @@
+[![Repo Size](https://img.shields.io/github/repo-size/nicknickolasm4/sig-pagination)](https://github.com/seu-usuario/seu-repo)
 
 
 # what is this?
