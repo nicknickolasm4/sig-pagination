@@ -1,4 +1,14 @@
-[![Repo Size](https://img.shields.io/github/repo-size/nicknickolasm4/sig-pagination)](https://github.com/seu-usuario/seu-repo)
+[![Repo Size](https://img.shields.io/github/repo-size/nicknickolasm4/sig-pagination)](https://github.com/nicknickolasm4/sig-pagination)
+[![npm version](https://img.shields.io/npm/v/sig-pagination.svg)](https://npmjs.org/package/sig-pagination)
+[![npm license](https://img.shields.io/npm/l/sig-pagination.svg)](https://npmjs.org/package/sig-pagination)
+[![npm downloads](https://img.shields.io/npm/dm/sig-pagination)](https://npmjs.org/package/sig-pagination)
+[![Coverage Status](https://badgen.net/coveralls/c/github/nicknickolasm4/sig-pagination/master)](https://coveralls.io/github/nicknickolasm4/sig-pagination?branch=master)
+[![HitCount](https://hits.dwyl.com/nicknickolasm4/sig-pagination.svg)](https://hits.dwyl.com/nicknickolasm4/sig-pagination)
+
+
+
+
+
 
 
 # what is this?
