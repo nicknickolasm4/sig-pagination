@@ -17,7 +17,7 @@
     "vuejs"
   ],
   "author": "Nicknickolasm4",
-  "license": "ISC",
+  "license": "GPL",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nicknickolasm4/sig-pagination.git"
